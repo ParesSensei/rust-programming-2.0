@@ -1,10 +1,12 @@
 mod practice;
+mod practice_function;
 
 fn main() {
-    println!("hello, world!\n");
-    println!("hallo broh aku dunia");
+    my_fn("this is my function");
+    let str: &str = "Function call with a variable";
+    my_fn(str)
+}
 
-    //DEFINITIOn
-    let x: i16 = 10;
-    println!("x is {}", x);
+fn my_fn(s: &str) {
+    println!("{}", s);
 }
