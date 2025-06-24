@@ -40,8 +40,8 @@ fn main() {
     //
     // test_input()
 
-
-    practice_conditional_and_controlflow::solution_p1();
+    // practice_conditional_and_controlflow::solution_p1();
+    practice_conditional_and_controlflow::solution_p2();
 }
 #[test]
 fn grade_using_pattren_matching() {
