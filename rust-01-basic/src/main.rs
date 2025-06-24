@@ -1,6 +1,6 @@
 mod practice;
 mod practice_function;
-mod practice_condtitional_and_controlflow;
+mod practice_conditional_and_controlflow;
 //-------------------------------------------------------
 //                  -Control flow
 //                  -if else
@@ -23,21 +23,25 @@ fn main() {
     // } else {
     //     grade = 'F';
     // }
+    //
+    // let marks: i32 = 95;
+    // let grade: char = if marks >= 90 {
+    //     println!("You are great student");
+    //     'A'
+    // } else if marks >= 80 {
+    //     'B'
+    // } else if marks >= 70 {
+    //     'C'
+    // } else {
+    //     'F'
+    // };
+    //
+    // println!("The grade is {}", grade);
+    //
+    // test_input()
 
-    let marks: i32 = 95;
-    let grade: char = if marks >= 90 {
-        println!("You are great student");
-        'A'
-    } else if marks >= 80 {
-        'B'
-    } else if marks >= 70 {
-        'C'
-    } else {
-        'F'
-    };
 
-    println!("The grade is {}", grade);
-
+    practice_conditional_and_controlflow::solution_p1();
 }
 #[test]
 fn grade_using_pattren_matching() {
@@ -113,3 +117,65 @@ fn while_loop() {
 }
 
 // #[test]
+
+//-------------------------------------------------------
+//                  -Print
+//                  -Comment
+//                  -Input/output
+//-------------------------------------------------------
+
+#[test]
+fn test1() {
+    // single comment
+
+    /*
+    multi
+    line comment
+     */
+
+    print!("This is a print commnad");
+    print!("This be going print on the same line");
+
+    /* Escape sequences
+     \n : New line chracter
+     \t : tab space
+     \r : Carriage return
+     \" : Double quote
+     \\ : Backward slash
+     */
+
+    println!("\nWill be printed after one empty line");
+    println!("\t A tab space at the start");
+    println!("This will be overwrtitten \r This text will only appear on the screen");
+    println!("Peint double quotes \", Print Backslash \\");
+
+    println!(
+        "I am doing {2} from {1} year and i {0} it",
+        "like", 20, "Programming"
+    );
+
+    println!(
+        "{language} is a system programming language which is cool to {activity} in.\n",
+        activity = "code",
+        language = "Rust"
+    );
+
+    static WELCOME: &str= "Welcome to rust";
+    const PI: f32 = 3.14;
+
+    let _a = PI;
+    let _b = PI;
+
+    let _c = WELCOME;
+    let _d = WELCOME;
+}
+
+fn test_input() {
+    let mut n = String::new();
+    std::io::stdin()
+        .read_line(&mut n)
+        .expect("Failed to read input");
+
+    let n: f64 = n.trim().parse().expect("invalid input");
+    println!("{}", n);
+}
