@@ -94,3 +94,55 @@ pub fn solution_p2() {
 // Note: You may require the % operator which is used for computing the remainder
 // after dividing one number by another. It's commonly used to check for divisibility.
 // Example: The statement 17 % 5 will result in a value of 2.
+
+
+
+/*
+-----------------------------------------------------
+---------------------question no 3-------------------
+-----------------------------------------------------
+ */
+
+
+// still on progress
+
+
+
+/*
+-----------------------------------------------------
+---------------------question no 4-------------------
+-----------------------------------------------------
+ */
+
+// Problem 4:
+
+/*
+A palindrome is a word, verse, or sentence that reads the same backward or forward,
+such as 'Able was I ere I saw Elba,' or a number like 1881.
+
+Write a function named is_palindrome() that checks whether a given string is a palindrome or not.
+The function should take a string as input and return a boolean value indicating whether the string is a palindrome or not.
+*/
+
+pub fn solution_p4() {
+    let input = String::from("apapapa");
+    println!(
+        "It is {:?} that the given string is palindrome",
+        palindrome(input)
+    );
+}
+
+fn palindrome(input: String) -> bool {
+    /* Your Code here */
+    let mut reverse_code: String = "".to_string();
+
+    for i in input.chars(){
+        reverse_code = format!("{}{}", i, reverse_code);
+    }
+
+    if input == reverse_code {
+        true
+    } else {
+        false
+    }
+}
