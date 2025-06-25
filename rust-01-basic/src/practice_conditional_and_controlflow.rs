@@ -146,3 +146,34 @@ fn palindrome(input: String) -> bool {
         false
     }
 }
+
+
+
+/*
+-----------------------------------------------------
+---------------------question no 6-------------------
+-----------------------------------------------------
+ */
+// Problem 6: Write a function that implements the logic,
+// 'You can see the movie if you are 17 or older, or if you are 13 or older and have a parent's permission.'
+// Note: This means that if you 17 or older, you implicitly have permission.
+
+pub fn solution_p6() {
+    println!("John who is 14, can see the move: {}", can_see_movie(14, true));
+}
+
+fn can_see_movie(age: i32, permission: bool) -> bool {
+    // Write your code here to implement the logic
+    if age >= 17 {
+        true
+    } else if age >= 13{
+        if permission == true{
+            true
+        } else {
+            false
+        }
+    } else {
+        false
+    }
+
+}
