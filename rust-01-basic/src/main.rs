@@ -1,6 +1,7 @@
 mod practice;
 mod practice_function;
 mod practice_conditional_and_controlflow;
+mod ownership;
 //-------------------------------------------------------
 //                  -Control flow
 //                  -if else
@@ -42,8 +43,11 @@ fn main() {
 
     // practice_conditional_and_controlflow::solution_p1();
     // practice_conditional_and_controlflow::solution_p2();
+    practice_conditional_and_controlflow::solution_p3();
     // practice_conditional_and_controlflow::solution_p4();
-    practice_conditional_and_controlflow::solution_p6();
+    // practice_conditional_and_controlflow::solution_p6();
+
+    // directive()
 }
 #[test]
 fn grade_using_pattren_matching() {
@@ -180,4 +184,15 @@ fn test_input() {
 
     let n: f64 = n.trim().parse().expect("invalid input");
     println!("{}", n);
+}
+
+
+//-------------------------------------------------------
+//                  -Compiler Directive
+//-------------------------------------------------------
+
+#[allow(unused_variables)]
+fn directive() {
+    let i = 10;
+    let s: String = String::from("Hello");
 }
