@@ -2,6 +2,7 @@ mod practice;
 mod practice_function;
 mod practice_conditional_and_controlflow;
 mod ownership;
+mod practice_on_ownership;
 //-------------------------------------------------------
 //                  -Control flow
 //                  -if else
@@ -9,43 +10,15 @@ mod ownership;
 //-------------------------------------------------------
 
 fn main() {
-    // my_fn("this is my function");
-    // let str: &str = "Function call with a variable";
-    //
-    // let marks: i32 = 95;
-    // let mut grade: char = 'n';
-    //
-    // if marks >= 90 {
-    //     grade = 'A';
-    // } else if marks >= 80 {
-    //     grade = 'B';
-    // } else if marks >= 70 {
-    //     grade = 'C';
-    // } else {
-    //     grade = 'F';
-    // }
-    //
-    // let marks: i32 = 95;
-    // let grade: char = if marks >= 90 {
-    //     println!("You are great student");
-    //     'A'
-    // } else if marks >= 80 {
-    //     'B'
-    // } else if marks >= 70 {
-    //     'C'
-    // } else {
-    //     'F'
-    // };
-    //
-    // println!("The grade is {}", grade);
-    //
-    // test_input()
 
     // practice_conditional_and_controlflow::solution_p1();
     // practice_conditional_and_controlflow::solution_p2();
-    practice_conditional_and_controlflow::solution_p3();
+    // practice_conditional_and_controlflow::solution_p3();
     // practice_conditional_and_controlflow::solution_p4();
     // practice_conditional_and_controlflow::solution_p6();
+    // practice_on_ownership::solution_p1();
+    // practice_on_ownership::solution_p2();
+    practice_on_ownership::solution_p3();
 
     // directive()
 }
