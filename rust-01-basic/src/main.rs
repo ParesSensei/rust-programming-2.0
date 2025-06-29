@@ -21,7 +21,9 @@ fn main() {
     // practice_on_ownership::solution_p1();
     // practice_on_ownership::solution_p2();
     // practice_on_ownership::solution_p3();
-    practice_borrowing::solution_p1();
+    // practice_borrowing::solution_p1();
+    // practice_borrowing::solution_p2();
+    practice_borrowing::solution_p3();
 
     // directive()
 }
