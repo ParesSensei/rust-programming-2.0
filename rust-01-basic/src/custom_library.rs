@@ -160,3 +160,47 @@ fn test3() {
         participant.travel_allowance(60.0)
     );
 }
+
+//-------------------------------------------------------
+//                  -Options
+//-------------------------------------------------------
+
+struct Student {
+    name: String,
+    grade: Option<u32>
+}
+
+fn get_grade(student_name: &String, student_db: &Vec<Student>) -> Option<u32> {
+    for student in student_db {
+        if student.name == *student_name{
+            return student.grade;
+        }
+    }
+    None
+}
+
+#[test]
+fn test4() {
+    let student_db = vec![
+        Student {
+            name: String::from("Alice"),
+            grade: Some(90),
+        },
+        Student {
+            name: String::from("Bob"),
+            grade: Some(87),
+        },
+        Student {
+            name: String::from("Charlie"),
+            grade: None
+        },
+    ];
+
+    let student_name = String::from("Bob");
+    let student_grade = get_grade(&student_name, &student_db);
+
+    match student_grade {
+        Some(grade) => println!("grade is: {}", grade),
+        None => {}
+    }
+}
