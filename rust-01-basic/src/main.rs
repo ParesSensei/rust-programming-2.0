@@ -3,6 +3,8 @@ mod practice_function;
 mod practice_conditional_and_controlflow;
 mod ownership;
 mod practice_on_ownership;
+mod borrowing;
+mod practice_borrowing;
 //-------------------------------------------------------
 //                  -Control flow
 //                  -if else
@@ -18,7 +20,8 @@ fn main() {
     // practice_conditional_and_controlflow::solution_p6();
     // practice_on_ownership::solution_p1();
     // practice_on_ownership::solution_p2();
-    practice_on_ownership::solution_p3();
+    // practice_on_ownership::solution_p3();
+    practice_borrowing::solution_p1();
 
     // directive()
 }
@@ -169,3 +172,4 @@ fn directive() {
     let i = 10;
     let s: String = String::from("Hello");
 }
+
