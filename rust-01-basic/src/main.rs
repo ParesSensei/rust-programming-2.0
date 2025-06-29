@@ -10,6 +10,7 @@ mod custom_library;
 mod practice_struct;
 mod practice_enum;
 mod practice_option;
+mod practice_result;
 //-------------------------------------------------------
 //                  -Control flow
 //                  -if else
@@ -34,8 +35,10 @@ fn main() {
     // practice_enum::solution_p1();
     // practice_enum::solution_p2();
     // practice_option::solution_p1();
-    practice_option::solution_p2();
+    // practice_option::solution_p2();
     // directive()
+    // practice_result::solution_p1();
+    practice_result::solution_p2();
 }
 #[test]
 fn grade_using_pattren_matching() {
