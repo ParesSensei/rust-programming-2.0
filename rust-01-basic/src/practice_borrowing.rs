@@ -14,7 +14,7 @@ fn get_first_element(num_vec: &Vec<i32>) -> &i32 {
 // Problem 2: Fix the code so that it compiles.
 
 pub fn solution_p2() {
-    let mut vec_1 = vec![1, 2, 3];
+    let vec_1 = vec![1, 2, 3];
     let vec_2 = vec![4, 5, 6];
     let mut vec_ptr: &Vec<i32>;
     vec_ptr = &vec_1;

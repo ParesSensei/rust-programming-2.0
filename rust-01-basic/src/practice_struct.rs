@@ -23,6 +23,7 @@ fn new_fruit() -> Fruit {
     }
 }
 
+#[allow(unused)]
 fn print_fruit(fruit: Fruit) {
     println!(
         "You have {} apples and {} bananas",

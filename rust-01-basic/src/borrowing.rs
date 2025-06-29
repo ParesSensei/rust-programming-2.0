@@ -18,7 +18,7 @@ fn test1() {
     let ref_1 = &vec_1;
     let ref_2 = &vec_1;
     println!("ref1: {:?}, ref2: {:?}", ref_1, ref_2);
-    let ref3 = &mut vec_1;
+    let _ref3 = &mut vec_1;
 }
 
 //-------------------------------------------------------

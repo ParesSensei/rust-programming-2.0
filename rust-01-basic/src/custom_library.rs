@@ -17,25 +17,146 @@ fn test1() {
         fuel_level: 0.0,
         price: 5_000,
     };
-    let car_year = my_car.year;
+    let _car_year = my_car.year;
     my_car.fuel_level = 30.0;
 
-    let another_car = Car {
+    let _another_car = Car {
         owner: "new owner".to_string(),
         ..my_car
     };
 
     // Tuple struct
-    let point_2d = (1, 2);
-    let point_3d = (2, 3, 4);
+    let _point_2d = (1, 2);
+    let _point_3d = (2, 3, 4);
 
     struct Point2d(i32, i32);
     struct Point3d(i32, i32, i32);
 
-    let point1 = Point2d(1, 2);
-    let point2 = Point3d(2, 3, 4);
+    let _point1 = Point2d(1, 2);
+    let _point2 = Point3d(2, 3, 4);
 
     // unit struct
     struct ABC;
 }
 
+
+//-------------------------------------------------------
+//                  -Adding functionality on struct
+//-------------------------------------------------------
+
+struct Car1 {
+    owner: String,
+    year: u32,
+    fuel_level: f32,
+    price: u32,
+}
+
+impl Car1 {
+    fn monthly_insurance() -> u32 {
+        123
+    }
+
+    fn selling_price(&self) -> u32 {
+        self.price + Car1::monthly_insurance()
+    }
+
+    fn new(name: String, year: u32) -> Self {
+        Self{
+            owner: name,
+            year,
+            fuel_level: 0.0,
+            price: 0,
+        }
+    }
+
+    fn display_car_info(&self) {
+        println!(
+            "Owner: {}, Year {}, Price {}",
+            self.owner, self.year, self.price
+        )
+    }
+
+    fn refuel(& mut self, gallons: f32) {
+        self.fuel_level += gallons;
+    }
+
+    fn sell(self) -> Self {
+        self
+    }
+}
+
+
+#[test]
+fn test2() {
+    let mut my_car1: Car1 = Car1 {
+        owner: String::from("ABC"),
+        year: 32,
+        fuel_level: 0.0,
+        price: 5_000,
+    };
+
+    my_car1.display_car_info();
+
+    my_car1.refuel(10.5);
+    let _new_owner = my_car1.sell();
+
+    let _new_car = Car1::new("XYZ".to_string(), 2020);
+}
+
+//-------------------------------------------------------
+//                  -Enums
+//-------------------------------------------------------
+
+// enum WeekDay {
+//     Monday,
+//     Tuesday,
+//     Wednesday,
+//     Thursday,
+//     Friday,
+//     Saturday,
+//     Sunday,
+// }
+//
+// #[test]
+// fn test3() {
+//     let mut day = "Saturday".to_string();
+//
+//     let week_day = vec![
+//         "Monday".to_string(),
+//         "Tuesday".to_string(),
+//         "Wednesday".to_string(),
+//         "Thursday".to_string(),
+//         "Friday".to_string(),
+//         "Saturday".to_string(),
+//         "Sunday".to_string(),
+//     ];
+//     day = week_day[1].clone();
+//
+//     let day WeekDay::Saturday;
+// }
+
+enum TravelType {
+    Car,
+    Train,
+    Aeroplane,
+}
+
+impl TravelType {
+    fn travel_allowance(&self, miles: f32) -> f32 {
+        let allowance = match self {
+            TravelType::Car => miles * 2.0,
+            TravelType::Train => miles * 3.0,
+            TravelType::Aeroplane => miles * 5.0,
+        };
+        allowance
+    }
+}
+
+#[test]
+fn test3() {
+    let participant = TravelType::Car;
+    println!(
+        "Allowance of participant is: {}",
+        participant.travel_allowance(60.0)
+    );
+}

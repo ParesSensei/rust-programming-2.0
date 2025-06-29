@@ -8,6 +8,7 @@ mod practice_borrowing;
 mod dereferencing;
 mod custom_library;
 mod practice_struct;
+mod practice_enum;
 //-------------------------------------------------------
 //                  -Control flow
 //                  -if else
@@ -28,8 +29,9 @@ fn main() {
     // practice_borrowing::solution_p2();
     // practice_borrowing::solution_p3();
     // practice_struct::solution_p1();
-    practice_struct::solution_p2();
-
+    // practice_struct::solution_p2();
+    // practice_enum::solution_p1();
+    // practice_enum::solution_p2();
     // directive()
 }
 #[test]
