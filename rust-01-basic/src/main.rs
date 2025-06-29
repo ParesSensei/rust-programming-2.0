@@ -5,6 +5,9 @@ mod ownership;
 mod practice_on_ownership;
 mod borrowing;
 mod practice_borrowing;
+mod dereferencing;
+mod custom_library;
+mod practice_struct;
 //-------------------------------------------------------
 //                  -Control flow
 //                  -if else
@@ -23,7 +26,9 @@ fn main() {
     // practice_on_ownership::solution_p3();
     // practice_borrowing::solution_p1();
     // practice_borrowing::solution_p2();
-    practice_borrowing::solution_p3();
+    // practice_borrowing::solution_p3();
+    // practice_struct::solution_p1();
+    practice_struct::solution_p2();
 
     // directive()
 }
