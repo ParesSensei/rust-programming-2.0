@@ -11,6 +11,7 @@ mod practice_struct;
 mod practice_enum;
 mod practice_option;
 mod practice_result;
+mod practice_hashmap;
 //-------------------------------------------------------
 //                  -Control flow
 //                  -if else
@@ -38,7 +39,9 @@ fn main() {
     // practice_option::solution_p2();
     // directive()
     // practice_result::solution_p1();
-    practice_result::solution_p2();
+    // practice_result::solution_p2();
+    // practice_hashmap::solution_p1();
+    practice_hashmap::solution_p2();
 }
 #[test]
 fn grade_using_pattren_matching() {

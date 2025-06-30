@@ -2,6 +2,8 @@
 //                  -Structs and its types
 //-------------------------------------------------------
 
+use std::collections::HashMap;
+
 struct Car {
     owner: String,
     year: u32,
@@ -232,4 +234,55 @@ fn test4() {
     //     Some(grade) => println!("grade is: {}", grade),
     //     None => {}
     // }
+}
+
+//-------------------------------------------------------
+//                  -Hashmap
+//-------------------------------------------------------
+
+#[test]
+fn test5() {
+    let mut person: HashMap<&str, u32> = HashMap::new();
+    person.insert("Api",100);
+    person.insert("Bob", 140);
+    person.insert("Charlie", 12);
+
+    println!("the age is : {:?}", person.get("Bob").unwrap());
+
+    if person.contains_key("Bob"){
+        println!("the value exists");
+    } else {
+        println!("value not exist");
+    }
+
+    match person.get("Bob") {
+        Some(value) => println!("The value exists {}", value),
+        None => println!("Value not exist"),
+    }
+
+    for (name, age) in &person {
+        println!("The person {} has an age is {}", name, age);
+    }
+}
+
+#[test]
+fn test6() {
+    let mut likes: HashMap<&str, &str> = HashMap::new();
+
+    likes.entry("nouman").or_insert("apple");
+    likes.entry("nouman").or_insert("manggo");
+    println!("the likes are: {:?}", likes);
+}
+
+#[test]
+fn test7() {
+    let some_vec = vec![2,3,4,5,3,2,4,3,5,2,3,4,3,4,2,4,2,4,3,3,2];
+    let mut freq_vec: HashMap<i32, i32> = HashMap::new();
+
+    for i in &some_vec {
+        let freq: &mut i32 = freq_vec.entry(*i).or_insert(0);
+        *freq += 1;
+    }
+
+    println!("{:?}", freq_vec);
 }
