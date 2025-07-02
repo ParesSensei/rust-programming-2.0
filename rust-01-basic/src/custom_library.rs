@@ -286,3 +286,144 @@ fn test7() {
 
     println!("{:?}", freq_vec);
 }
+
+//-------------------------------------------------------
+//                  - Associativity
+//                  - Explicit Boolean in conditional
+//                  - Operator overloading
+//-------------------------------------------------------
+
+#[test]
+fn test_aasociatifity() {
+    // Assocatifity
+
+    let x = 8 / 4 / 2; // (8 /4 ) / 2 = 1
+    let mut y = 42;
+    // x = y = 0; // x = (y = 0) // x = ()
+
+    // right to left
+    // =, +=, -=, *=, /=, %=, &=, |=, ^=, <<=, >>=
+
+    let mut a = 1;
+    let mut b = 2;
+    let mut c = 3;
+    // b += c += 42
+
+    // Explicit boolean in value
+    let x = 0;
+    if x != 0 {}
+
+    // Operator overloading
+    let a = 10 + 10;
+    let b = String::from("1") + ("2");
+    println!("{}", b);
+}
+
+//-------------------------------------------------------
+//                  -Pattern matching contexts
+//-------------------------------------------------------
+
+// value: the thing you are trying to match against
+// Pattern: The shape or structure you are matching
+
+#[test]
+fn test8() {
+    // 1. Match expression
+    let x = 3;
+    match x {
+        1 => println!("one"),
+        2 => println!("two"),
+        3 => println!("three"),
+        _ => println!("Something else"),
+    }
+
+    // Value: x
+    // Pattern: 1,2,3,_
+
+    // 2. if let
+    let x = 3;
+    if let 5 = x { // if x == 5
+        println!("Matched five");
+    }
+
+    // Value: x
+    // pattern: 5
+
+    if let x = 5{ // let x = 5
+        println!("This is always run");
+        println!("X: inner {}", x);
+    }
+
+    println!("x: outer {}", x);
+
+    // binding pattern
+    // Value: Contrencate value
+    // Pattern: variable
+
+    // 3. while let
+    let numbers = vec![1, 2, 3, 4, 5];
+    let mut i = 0;
+
+    while let 2 = numbers[i] {
+        println!("Found a value 2 at index : {}", i)
+    }
+
+    // Value: number[i]
+    // pattern : 2
+
+    // 4. let binding
+    let (a, b) = (10, 20);
+
+    // value: (10, 20)
+    // pattern : (a, b)
+
+    // 5. Function parameter
+    let point = (5, 8);
+    print_cords(point);
+    // value: (5, 8)
+    // pattern : (x, y)
+    // type: (132, i32)
+
+}
+
+fn print_cords((x, y) : (i32, i32)) {
+    println!("x: {}, y: {}", x, y);
+}
+
+//-------------------------------------------------------
+//                  -Casting of reference
+//-------------------------------------------------------
+
+#[test]
+fn test_casting() {
+    let x = 5;
+    let y = x as f32;
+
+    // casting immutable reference -> mutable reference (not allowed)
+    // let data = 40;
+    // let immutable_ref = &data;
+    // let mutable_ref = immutable_ref as &mut i32;
+
+    // Casting mutable reference -> immutable (allowed)
+    let mut data = 42;
+    let mutable_ref = &mut data;
+    let immutable_ref = mutable_ref as &i32;
+
+    /*
+    Immutable To Mutable (not allowed)                  ||  mutable to immutable (Allowed)
+    - since many immutable can coexist                  ||   - There is a single mutable reference at any time
+    therefore,                                          ||     therefore,
+    changing one of them to mutable may lead to         ||     changing it to immutable does not lead to violation
+    coexistence of mutable and immutable (violation)    ||
+     */
+
+    // assignment of reference
+    let mut str = String::from("hello");
+    let ref_str_1 = &str;
+    let ref_str_2 = ref_str_1;
+    println!("{ref_str_1}");
+}
+
+//-------------------------------------------------------
+//                  -destructured struct parameter
+//-------------------------------------------------------
