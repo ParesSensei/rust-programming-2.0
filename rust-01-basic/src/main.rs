@@ -12,6 +12,8 @@ mod practice_enum;
 mod practice_option;
 mod practice_result;
 mod practice_hashmap;
+mod flexibility_and_abstraction_with_generic_and_trait;
+mod practice_generic;
 //-------------------------------------------------------
 //                  -Control flow
 //                  -if else
@@ -41,7 +43,10 @@ fn main() {
     // practice_result::solution_p1();
     // practice_result::solution_p2();
     // practice_hashmap::solution_p1();
-    practice_hashmap::solution_p2();
+    // practice_hashmap::solution_p2();
+    // practice_generic::solution_p1();
+    // practice_generic::solution_p2();
+    practice_generic::solution_p3()
 }
 #[test]
 fn grade_using_pattren_matching() {

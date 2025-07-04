@@ -427,3 +427,29 @@ fn test_casting() {
 //-------------------------------------------------------
 //                  -destructured struct parameter
 //-------------------------------------------------------
+
+struct Point {
+    x: i32,
+    y: i32,
+}
+
+fn print_coooord(Point { x, y }: Point) {
+    // Value: p or point {x: 5, y: 7}
+    // pattern: Ppoint {x,y}
+    println!("x: {}, y: {}", x, y);
+}
+#[test]
+fn test_struckkk() {
+    let p = Point { x: 1, y: 2 };
+    match p {
+        Point { x: 0, y} => println!("on the y axist-at: {}", y ),
+        Point { x, y: 0} => println!("on the x axist-at: {}", x ),
+        Point { x, y} => println!("at point ({}, {})", x, y ),
+    }
+
+    // first arm
+    // Value: p or point { x: 0, y: 7 }
+    // Pattern: Point {x: 0, y}
+    let p = Point { x: 5, y: 6 };
+    print_coooord(p);
+}
