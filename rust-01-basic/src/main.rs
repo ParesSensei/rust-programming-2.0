@@ -19,6 +19,9 @@ mod trait_bound;
 mod practice_trait_bound;
 mod super_trait;
 mod practice_super_trait;
+mod trait_object;
+mod practice_trait_object;
+mod practice_trait_object2;
 //-------------------------------------------------------
 //                  -Control flow
 //                  -if else
@@ -58,7 +61,10 @@ fn main() {
     // practice_trait_bound::solution_p2();
     // practice_trait_bound::solution_p3();
     // practice_super_trait::solution_p1();
-    practice_super_trait::solution_p2();
+    // practice_super_trait::solution_p2();
+    // practice_trait_object::solution_p1();
+    // practice_trait_object::solution_p2();
+    practice_trait_object2::solution_p3();
 }
 
 #[test]
