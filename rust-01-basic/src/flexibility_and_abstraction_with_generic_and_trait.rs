@@ -143,3 +143,5 @@ fn test_trait() {
     r1.perimeter();
     s1.perimeter();
 }
+
+

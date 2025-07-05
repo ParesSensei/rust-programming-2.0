@@ -15,6 +15,8 @@ mod practice_hashmap;
 mod flexibility_and_abstraction_with_generic_and_trait;
 mod practice_generic;
 mod practice_trait;
+mod trait_bound;
+mod practice_trait_bound;
 //-------------------------------------------------------
 //                  -Control flow
 //                  -if else
@@ -49,7 +51,10 @@ fn main() {
     // practice_generic::solution_p2();
     // practice_generic::solution_p3()
     // practice_trait::solution_p1();
-    practice_trait::solution_p2();
+    // practice_trait::solution_p2();
+    // practice_trait_bound::solution_p1();
+    // practice_trait_bound::solution_p2();
+    practice_trait_bound::solution_p3();
 }
 #[test]
 fn grade_using_pattren_matching() {
