@@ -22,6 +22,8 @@ mod practice_super_trait;
 mod trait_object;
 mod practice_trait_object;
 mod practice_trait_object2;
+mod derived_marker_trait;
+mod practice_associated_types;
 //-------------------------------------------------------
 //                  -Control flow
 //                  -if else
@@ -64,7 +66,9 @@ fn main() {
     // practice_super_trait::solution_p2();
     // practice_trait_object::solution_p1();
     // practice_trait_object::solution_p2();
-    practice_trait_object2::solution_p3();
+    // practice_trait_object2::solution_p3();
+    // practice_associated_types::solution_p1();
+    practice_associated_types::solution_p2();
 }
 
 #[test]
