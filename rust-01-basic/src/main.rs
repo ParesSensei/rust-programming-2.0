@@ -24,6 +24,8 @@ mod practice_trait_object;
 mod practice_trait_object2;
 mod derived_marker_trait;
 mod practice_associated_types;
+mod closure;
+mod practice_closure;
 //-------------------------------------------------------
 //                  -Control flow
 //                  -if else
@@ -68,7 +70,11 @@ fn main() {
     // practice_trait_object::solution_p2();
     // practice_trait_object2::solution_p3();
     // practice_associated_types::solution_p1();
-    practice_associated_types::solution_p2();
+    // practice_associated_types::solution_p2();
+    // practice_closure::solution_p1();
+    // practice_closure::solution_p2();
+    // practice_closure::solution_p3();
+    practice_closure::solution_p4();
 }
 
 #[test]
