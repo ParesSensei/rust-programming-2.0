@@ -30,6 +30,8 @@ mod functional_pointer;
 mod practice_functional_closure;
 mod iterators;
 mod practice_iterator_intoiter;
+mod practice_iterating_over_collection;
+mod combinators;
 //-------------------------------------------------------
 //                  -Control flow
 //                  -if else
@@ -37,7 +39,6 @@ mod practice_iterator_intoiter;
 //-------------------------------------------------------
 
 fn main() {
-
     // practice_conditional_and_controlflow::solution_p1();
     // practice_conditional_and_controlflow::solution_p2();
     // practice_conditional_and_controlflow::solution_p3();
@@ -83,7 +84,9 @@ fn main() {
     // practice_functional_closure::solution_p2();
     // practice_iterator_intoiter::solution_p1();
     // practice_iterator_intoiter::solution_p2();
-    practice_iterator_intoiter::solution_p3();
+    // practice_iterator_intoiter::solution_p3();
+    // practice_iterating_over_collection::solution_p1();
+    practice_iterating_over_collection::solution_p2();
 }
 
 #[test]
