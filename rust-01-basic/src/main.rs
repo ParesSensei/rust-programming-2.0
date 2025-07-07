@@ -34,6 +34,7 @@ mod practice_iterating_over_collection;
 mod combinators;
 mod lifetimes;
 mod practice_lifetime;
+mod practice_lifetime_elison;
 //-------------------------------------------------------
 //                  -Control flow
 //                  -if else
@@ -92,7 +93,8 @@ fn main() {
     // practice_lifetime::solution_p1();
     // practice_lifetime::solution_p2();
     // practice_lifetime::solution_p3();
-    practice_lifetime::solution_p4();
+    // practice_lifetime::solution_p4();
+    practice_lifetime_elison::solution_p1();
 }
 
 #[test]
