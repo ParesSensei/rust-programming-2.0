@@ -35,6 +35,8 @@ mod combinators;
 mod lifetimes;
 mod practice_lifetime;
 mod practice_lifetime_elison;
+mod box_smart_pointer;
+mod practice_box_smart_pointer;
 //-------------------------------------------------------
 //                  -Control flow
 //                  -if else
@@ -94,7 +96,11 @@ fn main() {
     // practice_lifetime::solution_p2();
     // practice_lifetime::solution_p3();
     // practice_lifetime::solution_p4();
-    practice_lifetime_elison::solution_p1();
+    // practice_lifetime_elison::solution_p1();
+    // practice_box_smart_pointer::solution_p1();
+    // practice_box_smart_pointer::solution_p2();
+    // practice_box_smart_pointer::solution_p3();
+    practice_box_smart_pointer::solution_p4();
 }
 
 #[test]
