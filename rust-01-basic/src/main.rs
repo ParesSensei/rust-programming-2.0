@@ -26,6 +26,8 @@ mod derived_marker_trait;
 mod practice_associated_types;
 mod closure;
 mod practice_closure;
+mod functional_pointer;
+mod practice_functional_closure;
 //-------------------------------------------------------
 //                  -Control flow
 //                  -if else
@@ -74,7 +76,9 @@ fn main() {
     // practice_closure::solution_p1();
     // practice_closure::solution_p2();
     // practice_closure::solution_p3();
-    practice_closure::solution_p4();
+    // practice_closure::solution_p4();
+    // practice_functional_closure::solution_p1();
+    practice_functional_closure::solution_p2();
 }
 
 #[test]
