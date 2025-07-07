@@ -28,6 +28,8 @@ mod closure;
 mod practice_closure;
 mod functional_pointer;
 mod practice_functional_closure;
+mod iterators;
+mod practice_iterator_intoiter;
 //-------------------------------------------------------
 //                  -Control flow
 //                  -if else
@@ -78,7 +80,10 @@ fn main() {
     // practice_closure::solution_p3();
     // practice_closure::solution_p4();
     // practice_functional_closure::solution_p1();
-    practice_functional_closure::solution_p2();
+    // practice_functional_closure::solution_p2();
+    // practice_iterator_intoiter::solution_p1();
+    // practice_iterator_intoiter::solution_p2();
+    practice_iterator_intoiter::solution_p3();
 }
 
 #[test]
