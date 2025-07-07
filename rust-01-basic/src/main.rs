@@ -32,6 +32,8 @@ mod iterators;
 mod practice_iterator_intoiter;
 mod practice_iterating_over_collection;
 mod combinators;
+mod lifetimes;
+mod practice_lifetime;
 //-------------------------------------------------------
 //                  -Control flow
 //                  -if else
@@ -86,7 +88,11 @@ fn main() {
     // practice_iterator_intoiter::solution_p2();
     // practice_iterator_intoiter::solution_p3();
     // practice_iterating_over_collection::solution_p1();
-    practice_iterating_over_collection::solution_p2();
+    // practice_iterating_over_collection::solution_p2();
+    // practice_lifetime::solution_p1();
+    // practice_lifetime::solution_p2();
+    // practice_lifetime::solution_p3();
+    practice_lifetime::solution_p4();
 }
 
 #[test]
