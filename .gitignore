@@ -1,0 +1,10 @@
+# Rust build
+/target/
+
+# IDEs
+.idea/
+.vscode/
+
+# Misc
+#Cargo.lock
+*.rs.bk
