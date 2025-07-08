@@ -39,6 +39,7 @@ mod box_smart_pointer;
 mod practice_box_smart_pointer;
 mod rc_smart_pointer;
 mod practice_rc_smart_pointer;
+mod practice_refcell_smart_pointer;
 //-------------------------------------------------------
 //                  -Control flow
 //                  -if else
@@ -104,7 +105,10 @@ fn main() {
     // practice_box_smart_pointer::solution_p3();
     // practice_box_smart_pointer::solution_p4();
     // practice_rc_smart_pointer::solution_p1();
-    practice_rc_smart_pointer::solution_p2();
+    // practice_rc_smart_pointer::solution_p2();
+    practice_refcell_smart_pointer::solution_p1();
+    practice_refcell_smart_pointer::solution_p2();
+    practice_refcell_smart_pointer::solution_p3();
 }
 
 #[test]
