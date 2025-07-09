@@ -40,6 +40,9 @@ mod practice_box_smart_pointer;
 mod rc_smart_pointer;
 mod practice_rc_smart_pointer;
 mod practice_refcell_smart_pointer;
+mod singly_llinked_list;
+mod practice_singly_linked_list;
+mod practice_singly_linked_list_2;
 //-------------------------------------------------------
 //                  -Control flow
 //                  -if else
@@ -106,9 +109,11 @@ fn main() {
     // practice_box_smart_pointer::solution_p4();
     // practice_rc_smart_pointer::solution_p1();
     // practice_rc_smart_pointer::solution_p2();
-    practice_refcell_smart_pointer::solution_p1();
-    practice_refcell_smart_pointer::solution_p2();
-    practice_refcell_smart_pointer::solution_p3();
+    // practice_refcell_smart_pointer::solution_p1();
+    // practice_refcell_smart_pointer::solution_p2();
+    // practice_refcell_smart_pointer::solution_p3();
+    // practice_singly_linked_list::solution_p1();
+    practice_singly_linked_list_2::solution_p2();
 }
 
 #[test]
