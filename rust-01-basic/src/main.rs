@@ -43,6 +43,10 @@ mod practice_refcell_smart_pointer;
 mod singly_llinked_list;
 mod practice_singly_linked_list;
 mod practice_singly_linked_list_2;
+mod doubly_linked_list;
+mod practice_double_linked_list;
+mod practice_double_linked_list_2;
+mod practice_double_linked_list_3;
 //-------------------------------------------------------
 //                  -Control flow
 //                  -if else
@@ -113,7 +117,10 @@ fn main() {
     // practice_refcell_smart_pointer::solution_p2();
     // practice_refcell_smart_pointer::solution_p3();
     // practice_singly_linked_list::solution_p1();
-    practice_singly_linked_list_2::solution_p2();
+    // practice_singly_linked_list_2::solution_p2();
+    // practice_double_linked_list::solution_p1();
+    // practice_double_linked_list_2::solution_p2();
+    practice_double_linked_list_3::solution_p3();
 }
 
 #[test]
