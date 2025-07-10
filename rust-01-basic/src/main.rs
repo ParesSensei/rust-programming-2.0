@@ -47,6 +47,7 @@ mod doubly_linked_list;
 mod practice_double_linked_list;
 mod practice_double_linked_list_2;
 mod practice_double_linked_list_3;
+mod builder_pattern;
 //-------------------------------------------------------
 //                  -Control flow
 //                  -if else
