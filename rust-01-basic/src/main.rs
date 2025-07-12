@@ -49,6 +49,8 @@ mod practice_double_linked_list_2;
 mod practice_double_linked_list_3;
 mod builder_pattern;
 mod size;
+mod concurrency;
+mod practice_thread;
 //-------------------------------------------------------
 //                  -Control flow
 //                  -if else
@@ -122,7 +124,9 @@ fn main() {
     // practice_singly_linked_list_2::solution_p2();
     // practice_double_linked_list::solution_p1();
     // practice_double_linked_list_2::solution_p2();
-    practice_double_linked_list_3::solution_p3();
+    // practice_double_linked_list_3::solution_p3();
+    // practice_thread::solution_p1();
+    practice_thread::solution_p2();
 }
 
 #[test]
