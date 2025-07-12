@@ -26,3 +26,20 @@ fn main() {
     println!("Hello 2 from the main");
     t.join();
 }
+
+
+// -------------------------------------------
+// 	Ownership and Threads
+//              - Prerequiste: Closures
+// -------------------------------------------
+
+#[test]
+fn main_2() {
+    let x = "some string".to_string();
+
+    thread::spawn(move || {
+        // let y = x;
+        println!("{x}");
+    });
+    //println!("{x}");
+}
