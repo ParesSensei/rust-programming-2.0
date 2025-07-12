@@ -53,6 +53,8 @@ mod concurrency;
 mod practice_thread;
 mod practice_thread_ownership;
 mod practice_thread_message_passing;
+mod asynchronous;
+mod practice_async_await;
 //-------------------------------------------------------
 //                  -Control flow
 //                  -if else
@@ -133,7 +135,9 @@ fn main() {
     // practice_thread_ownership::solution_p2();
     // practice_thread_message_passing::solution_p1();
     // practice_thread_message_passing::solution_p2();
-    practice_thread_message_passing::solution_p3();
+    // practice_thread_message_passing::solution_p3();
+    // practice_async_await::solution_p1();
+    practice_async_await::solution_p2();
 }
 
 #[test]
