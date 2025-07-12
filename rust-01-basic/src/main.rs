@@ -52,6 +52,7 @@ mod size;
 mod concurrency;
 mod practice_thread;
 mod practice_thread_ownership;
+mod practice_thread_message_passing;
 //-------------------------------------------------------
 //                  -Control flow
 //                  -if else
@@ -128,8 +129,11 @@ fn main() {
     // practice_double_linked_list_3::solution_p3();
     // practice_thread::solution_p1();
     // practice_thread::solution_p2();
-    practice_thread_ownership::solution_p1();
-    practice_thread_ownership::solution_p2();
+    // practice_thread_ownership::solution_p1();
+    // practice_thread_ownership::solution_p2();
+    // practice_thread_message_passing::solution_p1();
+    // practice_thread_message_passing::solution_p2();
+    practice_thread_message_passing::solution_p3();
 }
 
 #[test]

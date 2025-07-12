@@ -43,3 +43,68 @@ fn main_2() {
     });
     //println!("{x}");
 }
+
+
+// -------------------------------------------
+// 	Message Passing Through Channels (Part 1)
+// -------------------------------------------
+
+// Example 1
+
+use std::sync::mpsc;
+
+#[test]
+fn main_3() {
+    let (tx, rx) = mpsc::channel();
+    // let rx_clone = rx.clone();
+    for i in 0..10 {
+        let tx_clone = tx.clone();
+        thread::spawn(move || {
+            println!("Sending value {i}");
+            tx_clone.send(i).unwrap();
+        });
+    }
+
+    drop(tx);
+    // let recv_val = rx.recv().unwrap();
+    // println!("Recieved {recv_val}");
+    // let recv_val = rx.recv().unwrap();
+    // println!("Received {recv_val}");
+
+    for message in rx {
+        println!("Received {message}");
+    }
+}
+
+
+
+// ------------------------------------------------
+// 	Message Passing through Channels (Part 2)
+// ------------------------------------------------
+
+#[test]
+fn main_4() {
+    let (tx, rx) = mpsc::channel();
+
+    let handle = thread::spawn(move || {
+        let x = "some_value".to_string();
+        println!("Sending value {x}");
+        // thread::sleep(Duration::from_secs(3));
+        tx.send(x).unwrap();
+    });
+
+    // rx.recv().unwrap();
+    // println!("I am blocked");
+
+    let mut received_status = false;
+    while received_status != true {
+        match rx.try_recv() {
+            Ok(received_value) => {
+                println!("Received value is {:?}", received_value);
+                received_status = true;
+            }
+            Err(_) => println!("I am doing some other stuff"),
+        }
+    }
+}
+
