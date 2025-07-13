@@ -61,6 +61,7 @@ mod web_programming;
 mod file_handling;
 mod directory_and_path;
 mod regular_expression;
+mod other;
 //-------------------------------------------------------
 //                  -Control flow
 //                  -if else
