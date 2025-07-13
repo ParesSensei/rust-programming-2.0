@@ -58,6 +58,8 @@ mod practice_async_await;
 mod macro_basic;
 mod question_mark_operator;
 mod web_programming;
+mod file_handling;
+mod directory_and_path;
 //-------------------------------------------------------
 //                  -Control flow
 //                  -if else
