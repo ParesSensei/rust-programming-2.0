@@ -171,3 +171,9 @@ fn main_3() {
 
     let string_vec = vec_mac!("Nouman", "Azam");
 }
+
+macro_rules! make_struck {
+    ($name: ident {$($field: ident: $ty:ty),*}) => {
+        struct $name {$($field: $ty),*}
+    };
+}
