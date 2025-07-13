@@ -60,6 +60,7 @@ mod question_mark_operator;
 mod web_programming;
 mod file_handling;
 mod directory_and_path;
+mod regular_expression;
 //-------------------------------------------------------
 //                  -Control flow
 //                  -if else
