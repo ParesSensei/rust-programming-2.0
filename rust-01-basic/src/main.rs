@@ -55,6 +55,7 @@ mod practice_thread_ownership;
 mod practice_thread_message_passing;
 mod asynchronous;
 mod practice_async_await;
+mod macro_basic;
 //-------------------------------------------------------
 //                  -Control flow
 //                  -if else
